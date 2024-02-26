@@ -18,6 +18,17 @@ const firebaseConfig = {
   auth.languageCode = 'en';
   const provider = new GoogleAuthProvider();
 
+
+//btn admin
+document.getElementById("myBtn").onclick = function () {
+  location.href = "lirusadmin.html";
+};
+
+
+
+
+
+
   //btn google
   const googleLogin = document.getElementById("google-login");
   googleLogin.addEventListener("click", function(){
@@ -40,6 +51,7 @@ const firebaseConfig = {
   })
 
   //Database service create
+  
   const db = getFirestore();
 
   //Collection reference

@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@zxing/library": "^0.20.0",
+    "firebase": "^10.8.0"
+  }
+}

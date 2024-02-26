@@ -1,8 +1,4 @@
-const searchBook = document.querySelector("[data-search]");
-searchBook.addEventListener("input", e => {
-    const value = e.target.value
-    console.log(value)
-})
+
 
 
 
@@ -18,7 +14,7 @@ fetch("books.json")
         out +=`
         <tr> 
         <td><img src='${book.image}'> </td>  
-        <td>${book.bookName} </td>
+        <td>${book.title} </td>
         <td>${book.author} </td>
         <td>${book.age} </td>
         <td>${book.publisher} </td>
