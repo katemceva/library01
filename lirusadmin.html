@@ -7,47 +7,58 @@
     <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
     
-<div class="container mt-3">
-    
-<h1>Add / Delete book in library</h1>
+
+
+  <div class="container-fluid mt-3">
+   
+
     <div class="row">
-        <div class="col-sm-4  ">
-          
-  <form class="add"> 
-    <label for="title">Title</label>
-    <input type="text" name="title" required></br></br>
-    <label for="author">Author</label>
-    <input type="text" name="author" required></br></br>
-    <label for="author">Year</label>
-    <input type="text" name="year" required></br></br>
-    <label for="author">Year</label>
-    <input type="text" name="Year" ></br></br>
-    <label for="author">Publisher</label>
-    <input type="text" name="publisher"></br></br>
-    <label for="author">Kid's age</label>
-    <input type="text" name="age" required></br></br>
-    <button>Add Book to Database</button>
-  </form>
+      <div class="col-sm-2 p-3  "></div>
 
-</div>
-        
-
-    
+      <div class="col-sm-8 p-3 text-bg-light text-left"> <h1>Add book in library</h1><br>
+    <p>Fill in the feilds.</p><br>
+      <form class="add"> 
+        <label for="title">Title</label>
+        <input type="text" name="title" required></br></br>
+        <label for="author">Author</label>
+        <input type="text" name="author" required></br></br>
+        <label for="year">Year</label>
+        <input type="text" name="year" ></br></br>
+        <label for="age">Age</label>
+        <input type="text" name="age" ></br></br>
+        <label for="publisher">Publisher</label>
+        <input type="text" name="publisher"></br></br>
+        <label for="status">status</label>
+        <input type="text" name="status" required></br></br>
+        <label for="isbn">isbn</label>
+        <input type="text" name="isbn" required></br></br>
+        <br>
+        <button class="btn btn-secondary">Add Book to Database</button>
+      </form></div>
+      
+      <div class="col-sm-2 p-3 "></div>
+    </div>
   </div>
 
 
-</br></br>
-<div class="mb-3 mt-3">
-  <form class="delete">
-    <label for ="id">Books id:</label>
-    <input type="text" name="id" required>
-    <button>Delete Book</button>
-  </form>
-</div>
+    
+        
+          
+
+
+
+        
+
+    
+
+
+
   <!--<script src="lirusadmin.js" type="module"></script> -->
 
 
@@ -108,7 +119,13 @@ addBookForm.addEventListener('submit', (e) => {
   addDoc(bookCol,{
     title: formData.get("title"),
     author: formData.get("author"),
+    publisher: formData.get("publisher"),
+    age: formData.get("age"),
+    year: formData.get("year"),
+    status: formData.get("status"),
+    isbn: formData.get("isbn"),
   })
+  alert("Your book is added in database")
 })
 
 // // delete the book
